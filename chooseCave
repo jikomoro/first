@@ -1,0 +1,54 @@
+import random
+import time
+
+def displayIntro():
+	print('''You are in a land full of dragons. In front of you,
+	you see two caves. In one cave, the dragon is friendly
+	and will share his treasure with you. The other dragon
+	is greedy and hungry, and will eat you on sight.''')
+	print()
+
+def chooseCave():
+    cave = ''
+    #1 inconsistent use of indentation
+	while cave != '1' and cave != '2':
+		print('Which cave will you go into? (1 or 2)')
+		cave = input()
+
+	return caves
+        #2 return was outside of the function
+        #3 typo error: caves instead of cave
+
+def checkCave(chosenCave):
+	print('You approach the cave...')
+	#sleep for 2 seconds
+	time.sleep(2)
+	print('It is dark and spooky...')
+	#sleep for 2 seconds
+	time.sleep(3) #4 should be 2 instead of 3
+	print('A large dragon jumps out in front of you! He opens his jaws and...')
+	print()
+	#sleep for 2 seconds
+	time.sleep(2)
+	friendlyCave = random.randint(1, 2)
+
+	if chosenCave == str(friendlyCave):
+		print('Gives you his treasure!')
+	else:
+		print 'Gobbles you down in one bite!'
+		#5 Missing parentheses
+
+playAgain = 'yes'
+while playAgain = 'yes' or playAgain = 'y':
+#6&7 Two invalid syntax, should be == instead of =
+	displayIntro()
+	caveNumber = choosecave() #8error: choosecave instead of chooseCave
+	checkCave(caveNumber)
+    
+	print('Do you want to play again? (yes or no)')
+	playAgain = input()
+	if playAgain == "no":
+		print("Thanks for planing") #9typo error: planing instead of playing
+		
+#I found nine issues, but cannot find the last fault in the code.
+
